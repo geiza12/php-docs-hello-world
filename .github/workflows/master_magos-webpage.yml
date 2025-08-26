@@ -61,10 +61,11 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5722FDFDAA5C4732B3DB24211574C4DB }}
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
           app-name: 'magos-webpage'
           slot-name: 'Production'
           package: .
+
           
